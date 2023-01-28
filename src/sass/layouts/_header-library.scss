@@ -1,0 +1,60 @@
+.header-library {
+  background: url("../images/library-mobile.jpg");
+  @include bg; 
+  padding-top: 40px; 
+  padding-bottom: 92px;
+  @include retina { 
+    background: url ("../images/library-mobile@2x.jpg");
+  }
+  
+  @include tablet { 
+      background: url("../images/library-tablet.jpg"); 
+      @include bg; 
+      padding-bottom: 70px;
+      @include retina { 
+        background: url("../images/library-tablet@2x.jpg");
+      }
+  }
+  @include pc { 
+      background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url("../images/library-pc.jpg");
+      @include bg; 
+      padding-bottom: 80px;
+
+      @include retina { 
+        background: url("../images/library-pc@2x.jpg");
+      }
+  }
+}
+
+.library-search {
+  margin-top: 50px;
+  @include flex;
+  gap: 20px;
+}
+// .header-wrapper {
+//   display: flex;
+//     flex-direction: column;
+//     justify-content: flex-end;
+//     gap: 20px;
+//     flex-wrap: wrap;
+  
+//     @include tablet {
+//       flex-direction: row;
+//       justify-content: space-between;
+//       gap: 50px;
+//     }
+// }
+// #header-useremail-div {
+//   @include font-box(500, 13px, 1.1, null);
+//   color: var(--white-text-color);
+//   @include flex;
+// }
+.nothing-text {
+  width: 95vw;
+  margin-left: auto;
+  margin-right: auto;
+  @include font-box(500, 24px,1.33, null);
+  text-align: center;
+  display: block;
+}

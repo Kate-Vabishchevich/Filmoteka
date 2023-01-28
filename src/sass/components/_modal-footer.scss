@@ -1,0 +1,254 @@
+body.locked {
+		overflow: hidden;
+}
+
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.8s ease 0s;
+}
+
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+}
+
+
+.modal.active .footer-modal__body{
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+// ---------Розміщення модалки на сторінці----------
+
+.footer-modal__container {
+
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 30px 10px;
+}
+
+// ------------------Тіло модалки----------------------
+
+.footer-modal__body {  
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 280px;
+    height: 580px;
+
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+    background-color: var(--modal-movie-bgc);
+    overflow: hidden;
+
+
+    transition: all 0.8s ease 0s;
+    opacity: 0;
+    transform: translate(0px, -100%);
+     @include mobile {
+  }
+
+     @include tablet {
+  }
+
+     @include pc {
+    width: 900px;
+    height: 600px;
+  }
+}
+
+// ------------- Кнопка закриття модалки ------------
+
+.footer-modal__button-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: transparent;
+    color: var(--black-text-color);
+    stroke: currentColor;
+    fill: currentColor;
+    border-color: transparent;
+    transition: color var(--duration) var(--cubic);
+    padding: 0;
+    cursor: pointer;
+}
+
+// Контент в середені кнопки закриття модалки
+
+.footer-modal__icon:hover,
+.footer-modal__icon:focus {
+    color: var(--accent-text-color);
+}
+.footer-modal__team {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.3em;
+
+    color: var(--accent-text-color);
+    text-align: left;
+}
+
+// Cтилі для слайдеру------------------------------------------
+
+.mySwiper {
+  width: 820px;
+  height: 500px;
+}
+.footer-modal__body {
+  padding: 40px;
+}
+.swiper__item {
+  width: 200px;
+  padding: 35px;
+  background: linear-gradient(180deg, rgb(247, 246, 244) 0%, var(--accentBG) 100%);
+  border-radius: 50px;
+  margin-top: 10px;
+}
+
+div.swiper-button-prev::after,
+div.swiper-button-next::after  {
+  font-size: 25px;
+}
+div.swiper-button-prev,
+div.swiper-button-next {
+  color: var(--accentBG);
+}
+.swiper-pagination {
+  bottom: 0;
+}
+span.swiper-pagination-bullet {
+  background-color: var(--accentBG);
+}
+
+// Стилі для карточки студента--------------------------------------------------
+
+
+.border__outside {
+  padding: 10px;
+  margin: 0 auto;
+  width: 150px;
+  border-radius: 78px;
+  border-top: 3px solid var(--accentBG);
+  border-left: 3px solid var(--accentBG);
+  margin-bottom: 15px;
+}
+
+.swiper__img {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 5px;
+  border-radius: 78px;
+  border: 2px solid var(--modal-movie-bgc);
+
+}
+
+.swiper__img img {
+  width: 115px;
+  height: 115px; 
+  border-radius: 65px;
+  box-sizing: border-box;
+  border-radius: 78px;
+}
+
+.swiper__name {
+
+font-weight: 700;
+font-size: 24px;
+line-height: 1.3em;
+max-width: 135px;
+margin-left: auto;
+margin-right: auto;
+
+margin-bottom: 10px;
+
+text-align: center;
+color: var(--white-text-color);
+
+}
+
+.swiper__subtitle {
+font-weight: 600;
+font-size: 15px;
+line-height: 1em;
+
+text-align: center;
+color: var(--dark-text-color);
+
+}
+
+.swiper__soc-list {
+  display: flex;
+	justify-content: center;
+	gap: 20px;
+  margin-top: 10px;
+}
+
+.swiper__link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+  height: 44px;
+  width: 44px;
+
+	border-radius: 50%;
+  background: var(--white-text-color);
+
+	transition: background-color 250ms var(--cubic);
+	&:hover,
+	&:focus {
+		background-color: var(--dark-text-color);
+	}
+}
+
+.swiper__icon {
+	fill:var(--accentBG);
+	transition: fill 250ms var(--cubic);
+
+	&:hover,
+	&:focus{
+		fill: var(--white-text-color);
+	}
+
+}
+.swiper__text__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 10px;
+}
+.swiper__text {
+
+font-weight: 300;
+font-size: 15px;
+line-height: 1em;
+
+text-align: center;
+color: var(--white-text-color);
+
+}

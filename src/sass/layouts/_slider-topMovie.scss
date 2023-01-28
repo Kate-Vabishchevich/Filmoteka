@@ -1,0 +1,61 @@
+.topMovieGallery {
+  margin-bottom: 20px;
+
+  @include tablet {
+    margin-bottom: 40px;
+  }
+
+  @include pc {
+    margin-bottom: 60px;
+  }
+}
+
+.swiper {
+  @include mobile {
+    max-width: 480px;
+  }
+
+  @include tablet {
+    width: 768px;
+    padding: 0 32px;
+  }
+
+  @include pc {
+    width: 100%;
+  }
+}
+
+.topMovieGallery_slide {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  gap: 2px;
+}
+.topMovie_container {
+  flex-grow: 1;
+  @include mobile {
+    max-width: 120px;
+    max-height: 190px;
+  }
+
+  @include tablet {
+    width: 160px;
+    height: 270px;
+  }
+
+  @include pc {
+    width: 240px;
+    height: 360px;
+  }
+}
+.topMovieGallery-caption {
+  color: var(--accent-text-color);
+  text-align: center;
+  padding: 10px;
+}
+.swiper-wrapper {
+  transition-timing-function: linear;
+}
+.topMovie_img {
+  width: 100%;
+}

@@ -1,0 +1,20 @@
+.movie__gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--Gap20);
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include tablet {
+    gap: calc(var(--Gap16) * 2);
+    row-gap: 32px;
+  }
+
+  @include pc {
+    gap: calc(var(--Gap16) * 2) calc(var(--Gap16));
+    row-gap: 32px;
+  }
+}

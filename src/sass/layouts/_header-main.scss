@@ -1,0 +1,144 @@
+.header-main {
+  background: url('../images/background-mobile.jpg');
+  @include bg;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @include retina {
+    background: url ('../images/background-mobile@2x.jpg');
+  }
+
+  @include tablet {
+    background: url('../images/background-tablet.jpg');
+    @include bg;
+    padding-bottom: 50px;
+    @include retina {
+      background: url('../images/background-tablet@2x.jpg');
+    }
+  }
+  @include pc {
+    background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../images/background-pc.jpg');
+    @include bg;
+
+    @include retina {
+      background: url('../images/background-pc@2x.jpg');
+    }
+  }
+}
+.page-navigation {
+  @include flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  @include tablet {
+    gap: 90px;
+  }
+}
+.header-logo-link {
+  @include tablet {
+    @include flex;
+    gap: 10px;
+  }
+}
+.pheader {
+  @include font($fw: 500, $fs: 30, $lh: 35, $ls: 0.02);
+  color: var(--white-text-color);
+  display: none;
+  @include tablet {
+    display: flex;
+  }
+}
+.menu {
+  @include flex;
+  gap: 20px;
+  @include tablet {
+    gap: 30px;
+  }
+}
+
+.menu__link {
+  @include font($fw: 500, $fs: 12, $lh: 14, $ls: 0.02);
+  color: var(--white-text-color);
+  text-transform: uppercase;
+}
+.menu__link_current {
+  border-bottom: 3px solid #ff001b;
+}
+.search-form {
+  width: 100%;
+  border-bottom: 0.5px solid #fff;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+.search {
+  margin-top: 40px;
+  @include tablet {
+    width: 336px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.search-input {
+  background: transparent;
+  border: 0;
+  padding: 7px 13px;
+  width: 100%;
+  color: var(--white-text-color);
+  @include tablet {
+    width: 330px;
+    margin: 0 auto;
+  }
+}
+.searchBtn {
+  border: 0;
+  padding-bottom: 4px;
+  background: transparent;
+}
+.search-form ::placeholder {
+  @include font($fw: 400, $fs: 14, $lh: 16, $ls: 0.03);
+  color: var(--white-text-color);
+}
+.searchBtn {
+  @include flex;
+  fill: var(--white-text-color);
+}
+
+#header-useremail-div {
+  @include font-box(500, 13px, 1.1, null);
+  color: var(--white-text-color);
+  @include flex;
+}
+// .header__buttons--signup {
+//   display: block;
+// }
+
+.header__buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.header__button {
+  height: 34px;
+  width: 80px;
+}
+
+.header-logo-svg {
+  animation: scale-logo 2000ms infinite linear;
+}
+
+.pheader:hover {
+  transform: scale(1.05);
+  transition: 1.5s;
+}
+.header-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 20px;
+  flex-wrap: wrap;
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+  }
+}
